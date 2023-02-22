@@ -1,0 +1,35 @@
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+}
+
+.name {
+  cursor: pointer;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grocery-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.grocery-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
