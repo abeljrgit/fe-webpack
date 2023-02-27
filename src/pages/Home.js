@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { onDecrement, onIncrement } from '../store/action';
 class Home extends Component {
+  handleInc = () => {
+    this.props.onInc(2);
+  };
+
+  handlerDec = () => {
+    this.props.onDec(2);
+  };
+
   render() {
-    return <section>This is home count is {this.props.count}</section>;
+    return (
+      <section>
+        <p>This is home count is {this.props.count}</p>
+        <button onClick={this.handleInc}>Increment</button>
+        <button onClick={this.handlerDec}>Decrement</button>
+      </section>
+    );
   }
 }
 
@@ -11,4 +25,11 @@ const mapStateToProps = (state) => {
   return { count: state.count };
 };
 
-export default connect(mapStateToProps, null)(Home);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onInc: (val) => dispatch(onIncrement(val)),
+    onDec: (val) => dispatch(onDecrement(val)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps, null)(Home);
