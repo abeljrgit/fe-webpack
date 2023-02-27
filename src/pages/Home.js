@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export class Home extends Component {
+class Home extends Component {
   render() {
-    return <section>This is home</section>;
+    return <section>This is home count is {this.props.count}</section>;
   }
 }
+
+const mapStateToProps = (state) => {
+  return { count: state.count };
+};
+
+export default connect(mapStateToProps, null)(Home);
