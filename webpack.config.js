@@ -59,6 +59,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx', 'css'],
+    fallback: { fs: false, crypto: false },
   },
   plugins: [
     new HtmlWebpackPlugin({
