@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { onDecrement, onIncrement } from '../store/action';
+import { onDecrement, onIncrement } from '../../../services/action';
 import { Counter } from '../components';
+
 class Home extends Component {
   handleInc = () => {
     this.props.onInc(2);

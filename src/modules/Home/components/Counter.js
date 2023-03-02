@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { onDecrement, onIncrement } from '../store/action';
+import { onDecrement, onIncrement } from '../../../services/action';
 
 export const Counter = () => {
   const counter = useSelector((state) => {
